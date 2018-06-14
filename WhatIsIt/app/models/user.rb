@@ -22,6 +22,7 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   validates :password_digest, presence: true
 
+
   def to_s
     username
   end

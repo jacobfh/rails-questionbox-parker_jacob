@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, <%= @user.username %></h1>
+    <p>
+      Here's your weekly summary of activity on What is this?<br>
+    </p>
+    <p>
+      This week, you asked <%= pluralize(@question) %> questions. 
+    </p>
+    <p>Here is a list of all the questions you asked this week: <br>
+    <%= @question_list %></p>
+    <p>
+    This week, you submitted <%= pluralize(@answer) %> answers.
+  </p>
+  <p>Here is a list of all the answers you submitted this week: <br>
+  <%= @answer_list %></p>
+  <p> Thank you for your activity on What is this? this week, <%= @user.username %>!. </p>
+  </body>
+</html>
